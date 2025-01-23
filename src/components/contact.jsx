@@ -217,10 +217,10 @@ export const Contact = (props) => {
     // Make sure to replace these with your own EmailJS Service ID, Template ID, and Public Key
     emailjs
       .sendForm(
-        "service_9unj08l", // Service ID
-        "template_ispgf0i", // Template ID
+        "service_ce1j7wm", // Service ID
+        "template_fqp67iu", // Template ID
         e.target,           // Form element
-        "hD_T7QS6B4RPxFbpE" // Public Key
+        "sf-Kw6-h85cmz_CGy" // Public Key
       )
       .then(
         (result) => {
