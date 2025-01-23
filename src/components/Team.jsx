@@ -5,9 +5,9 @@ export const Team = (props) => {
     <div id="team" className="text-center">
       <div className="container">
         <div className="col-md-8 col-md-offset-2 section-title">
-          <h2>Meet the Team</h2>
-          <p>
-          Our team at CoreAI Solutions combines expertise in AI and healthcare to create innovative solutions for better patient care.
+          <h2 style={{ color: "#fff" }}>Meet the Team</h2>
+          <p style={{ color: "#fff" }}>
+            Our team at Core AI Solutions combines expertise in AI and healthcare to create innovative solutions for better patient care.
           </p>
         </div>
         <div id="row">
@@ -18,8 +18,8 @@ export const Team = (props) => {
                     {" "}
                     <img src={d.img} alt="..." className="team-img" />
                     <div className="caption">
-                      <h4>{d.name}</h4>
-                      <p>{d.job}</p>
+                      <h4 style={{ color: "#fff" }}>{d.name}</h4>
+                      <p style={{ color: "#fff" }}>{d.job}</p>
                     </div>
                   </div>
                 </div>
