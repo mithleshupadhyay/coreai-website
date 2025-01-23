@@ -1,0 +1,170 @@
+{
+  "Header": {
+    "title": "CoreAI Solutions India",
+    "paragraph": "We use artificial intelligence to make healthcare faster, smarter, and more accurate. We help doctors analyze medical images, predict health risks, and improve patient care with advanced AI tools."
+  },
+  "About": {
+    "paragraph": "CoreAI Solutions India is dedicated to transforming healthcare with cutting-edge artificial intelligence. We specialize in medical image analysis, early disease detection, workflow automation, and predictive analytics, helping healthcare providers deliver faster, more accurate, and efficient patient care. Our solutions empower medical professionals with advanced tools to enhance diagnostics, streamline processes, and ensure secure data management.",
+    "Why": [
+      "Advanced AI-powered medical solutions",
+      "Early detection of critical diseases",
+      "Streamlined workflows for efficiency",
+      "Accurate and secure data handling"
+    ],
+    "Why2": [
+      "Real-time analysis for remote healthcare",
+      "Innovative 3D imaging for surgical planning",
+      "Automated pathology assistance",
+      "Comprehensive training and education platforms"
+    ]
+},
+  "Gallery": [
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/01-large.jpg",
+      "smallImage": "img/portfolio/01-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/02-large.jpg",
+      "smallImage": "img/portfolio/02-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/03-large.jpg",
+      "smallImage": "img/portfolio/03-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/04-large.jpg",
+      "smallImage": "img/portfolio/04-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/05-large.jpg",
+      "smallImage": "img/portfolio/05-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/06-large.jpg",
+      "smallImage": "img/portfolio/06-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/07-large.jpg",
+      "smallImage": "img/portfolio/07-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/08-large.jpg",
+      "smallImage": "img/portfolio/08-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/09-large.jpg",
+      "smallImage": "img/portfolio/09-small.jpg"
+    }
+  ],
+
+  "Services": [
+  {
+    "icon": "fa fa-wordpress",
+    "name": "Medical Image Analysis",
+    "text": "We analyze X-rays, MRIs, and CT scans to find tumors and fractures."
+  },
+  {
+    "icon": "fa fa-cart-arrow-down",
+    "name": "Disease Diagnosis Support",
+    "text": "We help detect diseases like cancer and heart problems early."
+  },
+  {
+    "icon": "fa fa-language",
+    "name": "Predictive Analytics",
+    "text": "We predict patient outcomes and suggest better treatments."
+  },
+  {
+    "icon": "fa fa-pie-chart",
+    "name": "Remote Diagnostics",
+    "text": "We offer real-time analysis for remote healthcare."
+  },
+  {
+    "icon": "fa fa-pie-chart",
+    "name": "Pathology Assistance",
+    "text": "We analyze slides to detect diseases faster and more accurately."
+  },
+  {
+    "icon": "fa fa-pie-chart",
+    "name": "Training & Education",
+    "text": "We train professionals using real-world medical data."
+  }
+],
+  "Testimonials": [
+    {
+      "img": "img/testimonials/01.jpg",
+      "text": "\"CoreAI Solutions has completely transformed the way we analyze medical images. Their AI tools have significantly improved our diagnostic accuracy and efficiency.\"",
+      "name": "Dr. Priya Sharma"
+    },
+    {
+      "img": "img/testimonials/02.jpg",
+      "text": "\"The predictive analytics offered by CoreAI Solutions have helped us personalize treatment plans and improve patient outcomes. Truly a game-changer in healthcare.\"",
+      "name": "Dr. Arjun Mehta"
+    },
+    {
+      "img": "img/testimonials/03.jpg",
+      "text": "\"With CoreAI’s workflow automation, we’ve reduced turnaround times drastically. Our team can now focus more on patient care.\"",
+      "name": "Dr. Neha Kapoor"
+    }
+],
+  "Team": [
+    {
+      "img": "img/team/01.jpg",
+      "name": "John Doe",
+      "job": "Director"
+    },
+    {
+      "img": "img/team/02.jpg",
+      "name": "Mike Doe",
+      "job": "Senior Designer"
+    },
+    {
+      "img": "img/team/03.jpg",
+      "name": "Jane Doe",
+      "job": "Senior Designer"
+    },
+    {
+      "img": "img/team/04.jpg",
+      "name": "Karen Doe",
+      "job": "Project Manager"
+    }
+  ],
+  "Contact": {
+    "address": "4321 California St, San Francisco, CA 12345 ",
+    "phone": "+1 123 456 1234",
+    "email": "research@core-ai.org",
+    "facebook": "fb.com",
+    "twitter": "twitter.com",
+    "youtube": "youtube.com"
+  },
+  "Features": [
+    {
+      "icon": "fa fa-comments-o",
+      "title": "AI-Powered Insights",
+      "text": "Get actionable insights from medical data with advanced AI tools for accurate decision-making."
+    },
+    {
+      "icon": "fa fa-bullhorn",
+      "title": "Early Disease Detection",
+      "text": "Identify critical health conditions early with AI-driven diagnosis support for better patient outcomes."
+    },
+    {
+      "icon": "fa fa-group",
+      "title": "Enhanced Collaboration",
+      "text": "Streamline workflows and improve teamwork with automated processes and intelligent case prioritization."
+    },
+    {
+      "icon": "fa fa-magic",
+      "title": "Innovative 3D Solutions",
+      "text": "Transform 2D medical images into detailed 3D models for enhanced surgical planning and visualization."
+    }
+]
+}
