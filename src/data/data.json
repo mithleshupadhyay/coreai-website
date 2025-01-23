@@ -118,23 +118,23 @@
   "Team": [
     {
       "img": "img/team/01.jpg",
-      "name": "John Doe",
-      "job": "Director"
+      "name": "Dr. Sidharth Pancholi",
+      "job": "Chief Advisor"
     },
     {
       "img": "img/team/02.jpg",
       "name": "Mithlesh Upadhyay",
-      "job": "Data Scientist"
+      "job": "Sr. Data Scientist (Large Language Model)"
     },
     {
       "img": "img/team/03.jpg",
       "name": "Saurabh Nale",
-      "job": "Data Science Intern"
+      "job": "Data Scientist (Biomedical Engineering)"
     },
     {
       "img": "img/team/04.jpg",
-      "name": "Karen Doe",
-      "job": "Project Manager"
+      "name": "Nikhil Rao",
+      "job": "AI Researcher (Intern)"
     }
   ],
   "Contact": {
