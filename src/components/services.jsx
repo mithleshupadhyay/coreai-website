@@ -1,111 +1,122 @@
 import React from "react";
 
 export const Services = (props) => {
-  // Dynamic row distribution: Adjust the number of items per row
-  const distributeItems = (array) => {
-    const layout = [3, 3, 2]; // Adjust the number of items per row here
-    const result = [];
-    let startIndex = 0;
-
-    layout.forEach((count) => {
-      if (startIndex < array.length) {
-        result.push(array.slice(startIndex, startIndex + count));
-        startIndex += count;
-      }
-    });
-
-    // Add any remaining items to a final row
-    if (startIndex < array.length) {
-      result.push(array.slice(startIndex));
-    }
-
-    return result;
-  };
-
-  // New gradient colors for each card
-  const gradientColors = [
-    "linear-gradient(135deg, #ff7e5f, #feb47b)", // Warm orange to peach
-    "linear-gradient(135deg, #6a11cb, #2575fc)", // Purple to blue
-    "linear-gradient(135deg, #43cea2, #185a9d)", // Aqua to navy
-    "linear-gradient(135deg, #f953c6, #b91d73)", // Pink to magenta
-    "linear-gradient(135deg, #70e1f5, #ffd194)", // Soft teal to light orange
-    "linear-gradient(135deg, #ee0979, #ff6a00)", // Deep pink to orange
-    "linear-gradient(135deg, #11998e, #38ef7d)", // Green shades
-    "linear-gradient(135deg, #fc466b, #3f5efb)", // Pink to deep blue
-  ];
-
   return (
     <div
       id="services"
-      className="text-center"
       style={{
-        padding: "20px",
-        background: "linear-gradient(135deg, #2c3e50, #4ca1af)", // Main background
-        color: "#fff",
-        minHeight: "90vh",
+        background: "linear-gradient(135deg, #6a11cb, #2575fc)", // Sophisticated gradient
+        color: "#ffffff",
+        padding: "80px 20px",
+        textAlign: "center",
       }}
     >
-      <div className="container" style={{ maxWidth: "1200px", margin: "0 auto" }}>
-        <div className="section-title" style={{ marginBottom: "40px" }}>
-          <h2 style={{ color: "#fff" }}>Our Services</h2>
-          <p style={{ color: "#fff" }}>
+      <style jsx>{`
+        .services-container {
+          max-width: 1200px;
+          margin: auto;
+        }
+
+        .section-title h2 {
+          font-size: 2.8rem;
+          margin-bottom: 50px;
+          color: #ffffff;
+          font-weight: 700;
+        }
+
+        .service-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Automatically adjust columns */
+          gap: 30px;
+          justify-content: center;
+        }
+
+        .service-card {
+          background: linear-gradient(145deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          padding: 25px;
+          border-radius: 15px;
+          text-align: center;
+          box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+          transition: transform 0.3s, box-shadow 0.3s;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        .service-card:hover {
+          transform: translateY(-12px);
+          box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .service-image {
+          width: 100%;
+          max-height: 200px;
+          object-fit: cover;
+          margin-bottom: 20px;
+          border-radius: 12px;
+          border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .service-title {
+          font-size: 1.6rem;
+          margin-bottom: 15px;
+          color: #ffffff;
+          font-weight: 600;
+        }
+
+        .service-text {
+          font-size: 1rem;
+          line-height: 1.6;
+          color: #dcdcdc;
+          text-align: center;
+          padding: 0 15px;
+        }
+
+        @media (max-width: 768px) {
+          .service-title {
+            font-size: 1.4rem;
+          }
+
+          .service-text {
+            font-size: 0.95rem;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .service-title {
+            font-size: 1.3rem;
+          }
+
+          .service-text {
+            font-size: 0.9rem;
+          }
+        }
+      `}</style>
+
+      <div className="services-container">
+        <div className="section-title">
+          <h2>Our Services</h2>
+          <p>
             At Core AI Solutions, we deliver a wide array of innovative AI-driven healthcare services to enhance efficiency and patient outcomes.
           </p>
         </div>
-        <div>
+
+        <div className="service-grid">
           {props.data
-            ? distributeItems(props.data).map((row, rowIndex) => (
-                <div
-                  key={`row-${rowIndex}`}
-                  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    justifyContent: "space-evenly",
-                    flexWrap: "wrap",
-                    marginBottom: "20px",
-                  }}
-                >
-                  {row.map((service, i) => (
-                    <div
-                      key={`${service.name}-${i}`}
-                      style={{
-                        flex: "1 1 calc(100% / 3 - 20px)", // 3 items per row
-                        maxWidth: "calc(100% / 3 - 20px)",
-                        margin: "10px",
-                        boxSizing: "border-box",
-                        textAlign: "center",
-                        background: gradientColors[(rowIndex * 3 + i) % gradientColors.length],
-                        borderRadius: "10px",
-                        padding: "15px",
-                        boxShadow: "0 4px 8px rgba(0,0,0,0.2)",
-                        transition: "transform 0.3s, box-shadow 0.3s",
-                        color: "#fff",
-                      }}
-                      onMouseEnter={(e) => {
-                        e.currentTarget.style.transform = "scale(1.05)";
-                        e.currentTarget.style.boxShadow = "0 8px 16px rgba(0,0,0,0.4)";
-                      }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.style.transform = "scale(1)";
-                        e.currentTarget.style.boxShadow = "0 4px 8px rgba(0,0,0,0.2)";
-                      }}
-                    >
-                      <img
-                        src={service.img}
-                        alt={service.name}
-                        style={{
-                          width: "100%", // Full-width images
-                          maxWidth: "100%",
-                          height: "150px",
-                          borderRadius: "10px",
-                          objectFit: "cover", // Ensures image covers the area
-                          marginBottom: "15px",
-                        }}
-                      />
-                      <h4 style={{ marginBottom: "10px" }}>{service.name}</h4>
-                      <p style={{ fontSize: "14px", marginBottom: "10px" }}>{service.text}</p>
-                    </div>
-                  ))}
+            ? props.data.map((service, i) => (
+                <div key={`${service.name}-${i}`} className="service-card">
+                  <img
+                    src={service.img}
+                    alt={service.name}
+                    className="service-image"
+                    onError={(e) => {
+                      e.target.src = "img/placeholder.jpg"; // Fallback for broken images
+                    }}
+                  />
+                  <h3 className="service-title">{service.name}</h3>
+                  <p className="service-text">{service.text}</p>
                 </div>
               ))
             : "Loading services..."}
@@ -114,3 +125,8 @@ export const Services = (props) => {
     </div>
   );
 };
+
+
+
+
+

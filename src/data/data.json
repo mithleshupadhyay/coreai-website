@@ -166,25 +166,25 @@
     "youtube": "youtube.com"
   },
   "Features": [
-    {
-      "icon": "fa fa-comments-o",
-      "title": "AI-Powered Insights",
-      "text": "Get actionable insights from medical data with advanced AI tools for accurate decision-making."
-    },
-    {
-      "icon": "fa fa-bullhorn",
-      "title": "Early Disease Detection",
-      "text": "Identify critical health conditions early with AI-driven diagnosis support for better patient outcomes."
-    },
-    {
-      "icon": "fa fa-group",
-      "title": "Enhanced Collaboration",
-      "text": "Streamline workflows and improve teamwork with automated processes and intelligent case prioritization."
-    },
-    {
-      "icon": "fa fa-magic",
-      "title": "Innovative 3D Solutions",
-      "text": "Transform 2D medical images into detailed 3D models for enhanced surgical planning and visualization."
-    }
+  {
+    "img": "img/feature/01.jpg",
+    "title": "AI-Powered Insights",
+    "text": "Get actionable insights from medical data with advanced AI tools for accurate decision-making."
+  },
+  {
+    "img": "img/feature/02.jpg",
+    "title": "Early Disease Detection",
+    "text": "Identify critical health conditions early with AI-driven diagnosis support for better patient outcomes."
+  },
+  {
+    "img": "img/feature/03.jpg",
+    "title": "Enhanced Collaboration",
+    "text": "Streamline workflows and improve teamwork with automated processes and intelligent case prioritization."
+  },
+  {
+    "img": "img/feature/04.jpg",
+    "title": "Innovative 3D Solutions",
+    "text": "Transform 2D medical images into detailed 3D models for enhanced surgical planning and visualization."
+  }
 ]
 }
