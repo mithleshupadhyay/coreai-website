@@ -155,6 +155,11 @@
       "img": "img/team/05.jpg",
       "name": "Shubhro Dev",
       "job": "AI Researcher (Intern)"
+    },
+    {
+      "img": "img/team/07.jpg",
+      "name": "Abhijit Das",
+      "job": "AI Research Consultant"
     }
   ],
   "Contact": {
