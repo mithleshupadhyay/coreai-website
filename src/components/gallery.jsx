@@ -37,17 +37,43 @@
 
 
 
-import { Image } from "./image";
-import React from "react";
 
-export const Gallery = (props) => {
+
+
+
+import React, { useState, useEffect } from "react";
+
+export const Gallery = () => {
+  const gifNames = [
+    "AD_ASEG_Output.gif",
+    "AD_Output.gif",
+    "CN_ASEG_Output.gif",
+    "CN_Output.gif",
+    "MCI_ASEG_Output.gif",
+    "MCI_Output.gif"
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % gifNames.length);
+    }, 4000); // Change image every 4 seconds
+
+    return () => clearInterval(interval);
+  }, [gifNames.length]);
+
   return (
     <div id="portfolio" className="gallery-section">
       <style jsx>{`
         .gallery-section {
-          background: linear-gradient(to bottom, #1f1c2c, #928dab);
+          background: linear-gradient(to bottom,rgb(34, 44, 28), #928dab);
           padding: 60px 20px;
           font-family: Arial, sans-serif;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
         }
 
         .section-title {
@@ -67,65 +93,57 @@ export const Gallery = (props) => {
         }
 
         .portfolio-items {
+          position: relative;
+          width: 100%;
+          max-width: 1600px;
+          height: 430px;
+          overflow: hidden;
           display: flex;
-          flex-wrap: wrap;
-          gap: 20px;
+          align-items: center;
           justify-content: center;
         }
 
-        .portfolio-items .col-sm-6 {
-          flex: 0 1 calc(33.333% - 20px);
+        .gif-container {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
           display: flex;
           justify-content: center;
           align-items: center;
+          opacity: 0;
+          transform: scale(1.2);
+          transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
         }
 
-        .portfolio-items .col-sm-6:hover .image-wrapper {
-          transform: scale(1.05);
-          box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+        .gif-container.active {
+          opacity: 1;
+          transform: scale(1);
         }
 
-        .image-wrapper {
+        .gif-container img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
           border-radius: 8px;
-          overflow: hidden;
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        @media (max-width: 992px) {
-          .portfolio-items .col-sm-6 {
-            flex: 0 1 calc(50% - 20px);
-          }
-        }
-
-        @media (max-width: 768px) {
-          .portfolio-items .col-sm-6 {
-            flex: 0 1 calc(100% - 20px);
-          }
         }
       `}</style>
 
       <div className="container">
         <div className="section-title">
           <h2>Gallery</h2>
-          <p>These are some of our memorable moments captured on camera.</p>
+          <p>These are some gif from our projects!</p>
         </div>
         <div className="portfolio-items">
-          {props.data
-            ? props.data.map((d, i) => (
-                <div
-                  key={`${d.title}-${i}`}
-                  className="col-sm-6 col-md-4 col-lg-4"
-                >
-                  <div className="image-wrapper">
-                    <Image
-                      // title={d.title}
-                      largeImage={d.largeImage}
-                      smallImage={d.smallImage}
-                    />
-                  </div>
-                </div>
-              ))
-            : "Loading..."}
+          {gifNames.map((gif, index) => (
+            <div
+              key={gif}
+              className={`gif-container ${index === currentIndex ? "active" : ""}`}
+            >
+              <img src={`/img/gif/${gif}`} alt={`Gallery GIF ${index + 1}`} />
+            </div>
+          ))}
         </div>
       </div>
     </div>
